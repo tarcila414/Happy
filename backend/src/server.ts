@@ -1,44 +1,11 @@
-import express, { response } from 'express';
-import { Request, Response } from 'express';
-import { getRepository } from 'typeorm';
+import express from 'express';
 
-import Orphanage from './models/Orphanage';
 import './database/connection';
+import routes from './routes';
 
 const app = express();
 
 app.use(express.json());
-
-app.post('/orphanages', async (request, response) => {
-  const {
-    name,
-    latitude,
-    longitude,
-    about,
-    instructions,
-    opening_hours,
-    open_on_weekends,
-  } = request.body;
-
-  const orphanagesRepository = getRepository(Orphanage);
-  const orphanage = orphanagesRepository.create({
-    name,
-    latitude,
-    longitude,
-    about,
-    instructions,
-    opening_hours,
-    open_on_weekends,
-  });
-
-  console.log('================= ' + request.body.longitude);
-  await orphanagesRepository.save(orphanage);
-
-  return response.status(200).json({ message: 'FUNFOU' });
-});
-
-app.get('/users', (request, response) => {
-  return response.json({ message: 'Hello World' });
-});
+app.use(routes);
 
 app.listen(3333);
