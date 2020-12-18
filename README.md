@@ -32,7 +32,7 @@ yarn dev
 Runs the app in the development mode.
 The API will run at http://localhost:3333.
 
-:bangbang: DON'T FORGET: You need to create and fill the dotenv file. You can follow the
+:bangbang: DON'T FORGET: You need to create and fill the dotenv file at web/src. You can follow the
 example at web/src/.env-example.
 
 ## Meta :raising_hand:
@@ -43,7 +43,7 @@ Tárcila Fernanda Resende da Silva – [@tarcila414]
 
 ## Contributing :triangular_flag_on_post:
 
-1. _Fork_ it (<https://github.com/tarcila414/css-html/fork>)
+1. _Fork_ it (<https://github.com/tarcila414/Happy/fork>)
 2. Create your feature _branch_ (`git checkout -b feature/fooBar`)
 3. _Commit_ your changes (`git commit -am 'Add some fooBar'`)
 4. _Push_ to the branch (`git push origin feature/fooBar`)
